@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using AutoMapper;
+using System.Text.RegularExpressions;
 
 namespace LOT_Project.Controllers
 {
@@ -41,17 +42,30 @@ namespace LOT_Project.Controllers
         [HttpPost("/add")]
         public ActionResult<FlightDto> AddFlight([FromBody] FlightDto dto)
         {
+            if (string.IsNullOrWhiteSpace(dto.flightNumber) ||
+                string.IsNullOrWhiteSpace(dto.departurePoint) ||
+                string.IsNullOrWhiteSpace(dto.arrivalPoint) ||
+                string.IsNullOrWhiteSpace(dto.aircraftType))
+            {
+                return BadRequest("All fields are required.");
+            }
             var flight = _mapper.Map<Flight>(dto);
             if(flight == null)
             {
                 return BadRequest();
             }
+            if(!Regex.IsMatch(flight.flightNumber, @"^[A-Za-z]{2}\d{3}$"))
+            {
+                return BadRequest();
+            }
             if(flight.aircraftType == "Embraer"|| flight.aircraftType == "Boeing"|| flight.aircraftType == "Airbus")
             {
+                DateTime currentDateTime = DateTime.Now;
+
                 Flight flight1 = new Flight
                 {
                     flightNumber = dto.flightNumber,
-                    departureDate = dto.departureDate,
+                    departureDate = new DateTime(currentDateTime.Year, currentDateTime.Month, currentDateTime.Day, currentDateTime.Hour, currentDateTime.Minute,0),
                     departurePoint = dto.departurePoint,
                     arrivalPoint = dto.arrivalPoint,
                     aircraftType = dto.aircraftType,
@@ -69,6 +83,12 @@ namespace LOT_Project.Controllers
             _flightService.Delete(id);
 
             return NoContent();
+        }
+        [HttpPut("{id}")]
+        public ActionResult Update([FromBody]UpdateFlightDto dto, [FromRoute]int id)
+        {
+            _flightService.Update(id, dto);
+            return Ok();
         }
     }
 }

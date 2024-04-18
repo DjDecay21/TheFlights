@@ -7,18 +7,23 @@ using Microsoft.AspNetCore.Mvc;
 namespace LOT_Project.Controllers
 {
     [Route("api/[controler]/")]
-    public class LoginController : Controller
+    public class AccountController : Controller
     {
         private readonly IAccountService _accountService;
 
 
         private readonly FlightsDbContext _dbContext;
-        public LoginController(IAccountService accountService, FlightsDbContext dbContext)
+        public AccountController(IAccountService accountService, FlightsDbContext dbContext)
         {
             _accountService = accountService;
             _dbContext = dbContext;
         }
-
+        [HttpPost("/register")]
+        public ActionResult RegisterUser([FromBody]RegisterUserDto dto)
+        {
+            _accountService.RegisterUser(dto);
+            return Ok();
+        }
         [HttpPost("/login")]
         public ActionResult Login([FromBody] LoginDto dto)
         {

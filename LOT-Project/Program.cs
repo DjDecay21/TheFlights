@@ -3,6 +3,7 @@ using System.Text;
 using LOT_Project.Entities;
 using LOT_Project.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Identity.Client;
 using Microsoft.IdentityModel.Tokens;
 
@@ -47,6 +48,7 @@ namespace LOT_Project
             });
             builder.Services.AddScoped<IAccountService, AccountService>();
             builder.Services.AddScoped<FlightService>();
+            builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
