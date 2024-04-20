@@ -30,60 +30,38 @@ namespace LOT_Project.Controllers
 
         [HttpGet("/flights")]
 
-        public ActionResult <FlightDto> GetAll()
+        public ActionResult<FlightDto> GetAll()
         {
-            var flights = _dbContext.Flights.ToList();
-            if(flights == null)
+            try
             {
-                return NotFound();
+                var flights = _flightService.GetAll();
+
+                return Ok(flights);
             }
-            return Ok(flights);
+            catch (NotFoundExeption ex)
+            {
+                return NotFound(ex.Message);
+            }
+
+            //var flights = _dbContext.Flights.ToList();
+            //if (flights == null)
+            //{
+            //    return NotFound();
+            //}
+            //return Ok(flights);
         }
         [HttpPost("/add")]
         public ActionResult<FlightDto> AddFlight([FromBody] FlightDto dto)
         {
-            var checkFlight = _dbContext
-                .Flights
-                .FirstOrDefault(u=>u.flightNumber == dto.flightNumber);
-            if (checkFlight is null)
+            try
             {
-                if (string.IsNullOrWhiteSpace(dto.flightNumber) ||
-                string.IsNullOrWhiteSpace(dto.departurePoint) ||
-                string.IsNullOrWhiteSpace(dto.arrivalPoint) ||
-                string.IsNullOrWhiteSpace(dto.aircraftType))
-                {
-                    return BadRequest("All fields are required.");
-                }
-                var flight = _mapper.Map<Flight>(dto);
-                if (flight == null)
-                {
-                    return BadRequest();
-                }
-                if (!Regex.IsMatch(flight.flightNumber, @"^[A-Za-z]{2}\d{3}$"))
-                {
-                    return BadRequest("Correct Flight Number");
-                }
-                if (flight.aircraftType == "Embraer" || flight.aircraftType == "Boeing" || flight.aircraftType == "Airbus")
-                {
-                    DateTime currentDateTime = DateTime.Now;
-
-                    Flight flight1 = new Flight
-                    {
-                        flightNumber = dto.flightNumber,
-                        departureDate = new DateTime(currentDateTime.Year, currentDateTime.Month, currentDateTime.Day, currentDateTime.Hour, currentDateTime.Minute, 0),
-                        departurePoint = dto.departurePoint,
-                        arrivalPoint = dto.arrivalPoint,
-                        aircraftType = dto.aircraftType,
-                    };
-                    _dbContext.Flights.Add(flight1);
-                    _dbContext.SaveChanges();
-                    return Created($"/api/flight", flight1);
-                }
-                return BadRequest("Correct the aircraftType");
+                _flightService.Add(dto);
+                return Ok(dto);
             }
-            return BadRequest("The flight already exists");
-            
-            
+            catch (BadRequestExeption ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
         [HttpDelete("/delete/{id}/")]
         public ActionResult<FlightDto> Delete([FromRoute] int id)
