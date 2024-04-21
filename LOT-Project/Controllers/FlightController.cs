@@ -50,7 +50,7 @@ namespace LOT_Project.Controllers
             //}
             //return Ok(flights);
         }
-        [HttpPost("/add")]
+        [HttpPost("/flights")]
         public ActionResult<FlightDto> AddFlight([FromBody] FlightDto dto)
         {
             try
@@ -63,14 +63,14 @@ namespace LOT_Project.Controllers
                 return BadRequest(new { message = ex.Message });
             }
         }
-        [HttpDelete("/delete/{id}/")]
+        [HttpDelete("/flights/{id}/")]
         public ActionResult<FlightDto> Delete([FromRoute] int id)
         {
             _flightService.Delete(id);
 
             return NoContent();
         }
-        [HttpPut("{id}")]
+        [HttpPut("flights/{id}")]
         public ActionResult Update([FromBody]UpdateFlightDto dto, [FromRoute]int id)
         {
             try

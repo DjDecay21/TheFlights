@@ -2,6 +2,7 @@
 using LOT_Project.Entities;
 using LOT_Project.Exeptions;
 using LOT_Project.Models;
+using LOT_Project.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using System.Text.RegularExpressions;
@@ -15,18 +16,18 @@ namespace LOT_Project.Services
     }
     public class FlightService : IFlightService
     {
-        private readonly FlightsDbContext _dbContext;
+        private readonly IFlightsRepository _flightsRepository;
         private readonly IMapper _mapper;
         
-        public FlightService(FlightsDbContext dbContext, IMapper mapper)
+        public FlightService(FlightsDbContext dbContext, IMapper mapper, IFlightsRepository flightsRepository)
         {
+            _flightsRepository = flightsRepository;
             _mapper = mapper;
-            _dbContext = dbContext;
         }
         public List<FlightDto> GetAll()
         {
-            var flights = _dbContext.Flights.ToList();
-            if (flights == null)
+            var flights = _flightsRepository.Get();
+            if (!flights.Any())
             {
                 throw new NotFoundExeption("No data");
             }
@@ -41,9 +42,7 @@ namespace LOT_Project.Services
         }
         public void Add(FlightDto dto)
         {
-            var checkFlight = _dbContext
-                .Flights
-                .FirstOrDefault(u => u.flightNumber == dto.flightNumber);
+            var checkFlight = _flightsRepository.GetByFlightNumber(dto.flightNumber);
             if (checkFlight != null)
             {
                 throw new BadRequestExeption("The flight already exists");
@@ -63,40 +62,25 @@ namespace LOT_Project.Services
             }
             if (!Regex.IsMatch(flight.flightNumber, @"^[A-Za-z]{2}\d{3}$"))
             {
-                throw new BadRequestExeption("Correct Flight Number");
+                throw new BadRequestExeption("Incorrect Flight Number");
             }
             if (flight.aircraftType != "Embraer" && flight.aircraftType != "Boeing" && flight.aircraftType != "Airbus")
             {
-                throw new BadRequestExeption("Correct the aircraftType");
+                throw new BadRequestExeption("Incorrect the aircraftType");
 
             }
-            DateTime currentDateTime = DateTime.Now;
-
-            Flight flight1 = new Flight
-            {
-                flightNumber = dto.flightNumber,
-                departureDate = new DateTime(currentDateTime.Year, currentDateTime.Month, currentDateTime.Day, currentDateTime.Hour, currentDateTime.Minute, 0),
-                departurePoint = dto.departurePoint,
-                arrivalPoint = dto.arrivalPoint,
-                aircraftType = dto.aircraftType,
-            };
-            _dbContext.Flights.Add(flight1);
-            _dbContext.SaveChanges();
-            //throw new CreateExeption($"{flight1}");
+            _flightsRepository.Add(flight);
 
         }
         public void Delete(int id)
         {
-            var flight = _dbContext
-                .Flights
-                .FirstOrDefault(r=>r.id == id);
+            var flight = _flightsRepository.GetById(id);
             if(flight is null)
             {
                 throw new NotFoundExeption("Flight not found");
                 
             }
-            _dbContext.Flights.Remove(flight);
-            _dbContext.SaveChanges();
+            _flightsRepository.Delete(flight);
         }
 
         public void Update(int id, UpdateFlightDto dto)
@@ -110,9 +94,7 @@ namespace LOT_Project.Services
                 throw new BadRequestExeption("No change");
             }
             
-            var flight = _dbContext
-                        .Flights
-                        .FirstOrDefault(r => r.id == id);
+            var flight = _flightsRepository.GetById(id);
 
             if (flight is null)
                 throw new NotFoundExeption("Flight not found");
@@ -125,14 +107,7 @@ namespace LOT_Project.Services
             {
                 throw new BadRequestExeption("Correct aircraft type");
             }
-
-            
-            flight.flightNumber = dto.flightNumber;
-            flight.departureDate = dto.departureDate;
-            flight.departurePoint = dto.departurePoint;
-            flight.arrivalPoint = dto.arrivalPoint;
-            flight.aircraftType = dto.aircraftType;
-            _dbContext.SaveChanges();
+            _flightsRepository.Update(flight, dto);
         }
     }
 }
