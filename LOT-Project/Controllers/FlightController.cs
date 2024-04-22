@@ -42,13 +42,19 @@ namespace LOT_Project.Controllers
             {
                 return NotFound(ex.Message);
             }
-
-            //var flights = _dbContext.Flights.ToList();
-            //if (flights == null)
-            //{
-            //    return NotFound();
-            //}
-            //return Ok(flights);
+        }
+        [HttpGet("/flights/{id}/")]
+        public ActionResult<FlightDto>GetById(int id)
+        {
+            try
+            {
+                var flight = _flightService.GetById(id);
+                return Ok(flight);
+            }
+            catch (NotFoundExeption ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
         [HttpPost("/flights")]
         public ActionResult<FlightDto> AddFlight([FromBody] FlightDto dto)

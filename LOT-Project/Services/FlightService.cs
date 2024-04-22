@@ -12,7 +12,7 @@ namespace LOT_Project.Services
     public interface IFlightService
     {
         void Delete(int id);
-        List<FlightDto> GetAll();
+        List<Flight> GetAll();
     }
     public class FlightService : IFlightService
     {
@@ -24,21 +24,32 @@ namespace LOT_Project.Services
             _flightsRepository = flightsRepository;
             _mapper = mapper;
         }
-        public List<FlightDto> GetAll()
+        public List<Flight> GetAll()
         {
             var flights = _flightsRepository.Get();
             if (!flights.Any())
             {
                 throw new NotFoundExeption("No data");
             }
-            return flights.Select(flight => new FlightDto
+            return flights.Select(flight => new Flight
             {
+                id= flight.id,
                 flightNumber = flight.flightNumber,
                 departureDate = flight.departureDate,
                 departurePoint = flight.departurePoint,
                 arrivalPoint = flight.arrivalPoint,
                 aircraftType = flight.aircraftType
             }).ToList();
+        }
+        public Flight GetById(int id)
+        {
+            var flight = _flightsRepository.GetById(id);
+            if (flight == null)
+            {
+                throw new NotFoundExeption("No data");
+
+            }
+            return flight;
         }
         public void Add(FlightDto dto)
         {
