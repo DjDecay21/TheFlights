@@ -286,7 +286,7 @@ namespace LOT_Project_Tests
                 aircraftType = "Boeing"
             };
             flightsRepositoryMock.Setup(x => x.GetById(5))
-                .Returns(flightInstance); // Zwraca istniejący lot
+                .Returns(flightInstance);
 
             var sut = new FlightService(dbContext, mapper, flightsRepositoryMock.Object);
             var flightIdToDelete = 5;
@@ -295,7 +295,6 @@ namespace LOT_Project_Tests
             sut.Delete(flightIdToDelete);
 
             // Assert
-            // Sprawdzamy, czy metoda Delete została wywołana tylko jeśli lot istnieje
             flightsRepositoryMock.Verify(x => x.Delete(It.IsAny<Flight>()), Times.Once);
         }
 
