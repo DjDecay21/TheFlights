@@ -56,10 +56,7 @@ namespace LOT_Project.Services
                 throw new BadRequestExeption("All fields are required.");
             }
             var flight = _mapper.Map<Flight>(dto);
-            if (flight == null)
-            {
-                throw new BadRequestExeption("");
-            }
+
             if (!Regex.IsMatch(flight.flightNumber, @"^[A-Za-z]{2}\d{3}$"))
             {
                 throw new BadRequestExeption("Incorrect Flight Number");

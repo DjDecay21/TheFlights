@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QBD4SM5/siw4F+bgaIV7uSIBovesG36wifmZ3nHupPJcFkIlexsxChRuB96Yyl1nDz/Teuy457/bEZFlxvMbTw==",
+  "dgSpecHash": "HkSXuZlnz7y7B2HqPX8YzKXDUIbEPLTlkbTmBU8iwG/HmLfAHQ2DvaSV/R7hewM1gNlCD2NN1X4F4crX/R5zDQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mrych\\Documents\\GitHub\\TheFlights\\LOT-Project_Tests\\LOT-Project_Tests.csproj",
+  "projectFilePath": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\TheFlights\\LOT-Project_Tests\\LOT-Project_Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mrych\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\mrych\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

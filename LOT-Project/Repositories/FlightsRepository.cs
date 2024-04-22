@@ -21,7 +21,6 @@ namespace LOT_Project.Repositories
         {
             return _dbContext.Flights.FirstOrDefault(x => x.flightNumber == flightNumber);
         }
-
         public void Add(Flight flight)
         {
             _dbContext.Flights.Add(flight);

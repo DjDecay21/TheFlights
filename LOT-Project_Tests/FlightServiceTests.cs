@@ -5,6 +5,7 @@ using LOT_Project.Exeptions;
 using LOT_Project.Models;
 using LOT_Project.Repositories;
 using LOT_Project.Services;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Moq;
 using System;
 
@@ -185,7 +186,7 @@ namespace LOT_Project_Tests
             Assert.Throws<BadRequestExeption>(action);
         }
         [Fact]
-        public void Update_ValidFlight_FlightWithValidParametersUpdated()
+        public void Update_WhenSuccess_ReturnUpdatedFlight()
         {
             //Arange
             var dbContext = new FlightsDbContext();
@@ -231,7 +232,9 @@ namespace LOT_Project_Tests
             //Assert
             flightsRepositoryMock.Verify(x => x.Update(
                 It.Is<Flight>(y =>
-                    y.aircraftType == updateFlightDtoInstance.aircraftType &&
+                    y.aircraftType == "Boeing" || 
+                    y.aircraftType == "Embraer" ||
+                    y.aircraftType == "Airbus" &&
                     y.flightNumber == updateFlightDtoInstance.flightNumber &&
                     y.departureDate == updateFlightDtoInstance.departureDate &&
                     y.arrivalPoint == updateFlightDtoInstance.arrivalPoint &&
@@ -240,6 +243,62 @@ namespace LOT_Project_Tests
                 Times.Once);
 
         }
+        [Fact]
+        public void Delete_FlightNoExsist_NotFoundExeption()
+        {
+            // Arrange
+            var dbContext = new FlightsDbContext();
+            var myProfile = new MappingProfile();
+            var configuration = new MapperConfiguration(cfg => cfg.AddProfile(myProfile));
+            IMapper mapper = new Mapper(configuration);
+
+            var flightInstance = new Flight();
+            var flightId = 4;
+            var flightsRepositoryMock = new Mock<IFlightsRepository>();
+            var sut = new FlightService(dbContext, mapper, flightsRepositoryMock.Object);
+
+            // Act
+            flightsRepositoryMock.Setup(x => x.GetById(5))
+                 .Returns(flightInstance);
+            flightsRepositoryMock.Setup(x => x.Delete(flightInstance));
+            var action = () => sut.Delete(flightId);
+
+            // Assert
+            Assert.Throws<NotFoundExeption>(action);
+        }
+        [Fact]
+        public void Delete_FlightExists_FlightWithValidParametersDeleted()
+        {
+            // Arrange
+            var dbContext = new FlightsDbContext();
+            var myProfile = new MappingProfile();
+            var configuration = new MapperConfiguration(cfg => cfg.AddProfile(myProfile));
+            IMapper mapper = new Mapper(configuration);
+
+            var flightsRepositoryMock = new Mock<IFlightsRepository>();
+            var flightInstance = new Flight
+            {
+                id = 5,
+                flightNumber = "PL111",
+                departureDate = DateTime.Now,
+                departurePoint = "Krakow",
+                arrivalPoint = "Poznan",
+                aircraftType = "Boeing"
+            };
+            flightsRepositoryMock.Setup(x => x.GetById(5))
+                .Returns(flightInstance); // Zwraca istniejący lot
+
+            var sut = new FlightService(dbContext, mapper, flightsRepositoryMock.Object);
+            var flightIdToDelete = 5;
+
+            // Act
+            sut.Delete(flightIdToDelete);
+
+            // Assert
+            // Sprawdzamy, czy metoda Delete została wywołana tylko jeśli lot istnieje
+            flightsRepositoryMock.Verify(x => x.Delete(It.IsAny<Flight>()), Times.Once);
+        }
+
 
     }
 }

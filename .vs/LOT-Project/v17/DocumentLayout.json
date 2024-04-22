@@ -7,25 +7,32 @@
       "RelativeMoniker": "D:0:0:{295932A4-5C05-4974-8C5D-369D0C97A3A5}|LOT-Project\\LOT-Project.csproj|solutionrelative:lot-project\\services\\flightservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{295932A4-5C05-4974-8C5D-369D0C97A3A5}|LOT-Project\\LOT-Project.csproj|c:\\users\\mrych\\onedrive\\pulpit\\projektygithub\\theflights\\lot-project\\controllers\\flightcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{295932A4-5C05-4974-8C5D-369D0C97A3A5}|LOT-Project\\LOT-Project.csproj|solutionrelative:lot-project\\controllers\\flightcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{316EF22B-B03B-4A9A-BA0F-584D23711115}|LOT-Project_Tests\\LOT-Project_Tests.csproj|c:\\users\\mrych\\onedrive\\pulpit\\projektygithub\\theflights\\lot-project_tests\\flightservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{316EF22B-B03B-4A9A-BA0F-584D23711115}|LOT-Project_Tests\\LOT-Project_Tests.csproj|solutionrelative:lot-project_tests\\flightservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{295932A4-5C05-4974-8C5D-369D0C97A3A5}|LOT-Project\\LOT-Project.csproj|c:\\users\\mrych\\onedrive\\pulpit\\projektygithub\\theflights\\lot-project\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{295932A4-5C05-4974-8C5D-369D0C97A3A5}|LOT-Project\\LOT-Project.csproj|solutionrelative:lot-project\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{295932A4-5C05-4974-8C5D-369D0C97A3A5}|LOT-Project\\LOT-Project.csproj|c:\\users\\mrych\\onedrive\\pulpit\\projektygithub\\theflights\\lot-project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{295932A4-5C05-4974-8C5D-369D0C97A3A5}|LOT-Project\\LOT-Project.csproj|solutionrelative:lot-project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\LOT-Project\\LOT-Project\\Flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{295932A4-5C05-4974-8C5D-369D0C97A3A5}|LOT-Project\\LOT-Project.csproj|c:\\users\\mrych\\onedrive\\pulpit\\projektygithub\\theflights\\lot-project\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{295932A4-5C05-4974-8C5D-369D0C97A3A5}|LOT-Project\\LOT-Project.csproj|solutionrelative:lot-project\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\LOT-Project\\LOT-Project\\FlightsDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{295932A4-5C05-4974-8C5D-369D0C97A3A5}|LOT-Project\\LOT-Project.csproj|c:\\users\\mrych\\onedrive\\pulpit\\projektygithub\\theflights\\lot-project\\repositories\\iflightsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{295932A4-5C05-4974-8C5D-369D0C97A3A5}|LOT-Project\\LOT-Project.csproj|solutionrelative:lot-project\\repositories\\iflightsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{295932A4-5C05-4974-8C5D-369D0C97A3A5}|LOT-Project\\LOT-Project.csproj|c:\\users\\mrych\\onedrive\\pulpit\\projektygithub\\theflights\\lot-project\\lot-project.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{295932A4-5C05-4974-8C5D-369D0C97A3A5}|LOT-Project\\LOT-Project.csproj|solutionrelative:lot-project\\lot-project.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{295932A4-5C05-4974-8C5D-369D0C97A3A5}|LOT-Project\\LOT-Project.csproj|c:\\users\\mrych\\onedrive\\pulpit\\projektygithub\\theflights\\lot-project\\repositories\\flightsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{295932A4-5C05-4974-8C5D-369D0C97A3A5}|LOT-Project\\LOT-Project.csproj|solutionrelative:lot-project\\repositories\\flightsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\LOT-Project\\LOT-Project\\Migrations\\20240416121018_FirstMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{295932A4-5C05-4974-8C5D-369D0C97A3A5}|LOT-Project\\LOT-Project.csproj|c:\\users\\mrych\\onedrive\\pulpit\\projektygithub\\theflights\\lot-project\\exeptions\\createexeption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{295932A4-5C05-4974-8C5D-369D0C97A3A5}|LOT-Project\\LOT-Project.csproj|solutionrelative:lot-project\\exeptions\\createexeption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{295932A4-5C05-4974-8C5D-369D0C97A3A5}|LOT-Project\\LOT-Project.csproj|c:\\users\\mrych\\onedrive\\pulpit\\projektygithub\\theflights\\lot-project\\exeptions\\deleteexeption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{295932A4-5C05-4974-8C5D-369D0C97A3A5}|LOT-Project\\LOT-Project.csproj|solutionrelative:lot-project\\exeptions\\deleteexeption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,11 +42,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\TheFlights\\LOT-Project\\Program.cs",
+              "RelativeDocumentMoniker": "LOT-Project\\Program.cs",
+              "ToolTip": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\TheFlights\\LOT-Project\\Program.cs",
+              "RelativeToolTip": "LOT-Project\\Program.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAqwDAAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T18:52:24.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IFlightsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\TheFlights\\LOT-Project\\Repositories\\IFlightsRepository.cs",
+              "RelativeDocumentMoniker": "LOT-Project\\Repositories\\IFlightsRepository.cs",
+              "ToolTip": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\TheFlights\\LOT-Project\\Repositories\\IFlightsRepository.cs",
+              "RelativeToolTip": "LOT-Project\\Repositories\\IFlightsRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T18:46:08.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FlightsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\TheFlights\\LOT-Project\\Repositories\\FlightsRepository.cs",
+              "RelativeDocumentMoniker": "LOT-Project\\Repositories\\FlightsRepository.cs",
+              "ToolTip": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\TheFlights\\LOT-Project\\Repositories\\FlightsRepository.cs",
+              "RelativeToolTip": "LOT-Project\\Repositories\\FlightsRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T17:31:05.857Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -49,86 +95,62 @@
               "RelativeDocumentMoniker": "LOT-Project\\Services\\FlightService.cs",
               "ToolTip": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\TheFlights\\LOT-Project\\Services\\FlightService.cs",
               "RelativeToolTip": "LOT-Project\\Services\\FlightService.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAowD4AAAAMAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAYwBMAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T08:02:13.75Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FlightController.cs",
-              "DocumentMoniker": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\TheFlights\\LOT-Project\\Controllers\\FlightController.cs",
-              "RelativeDocumentMoniker": "LOT-Project\\Controllers\\FlightController.cs",
-              "ToolTip": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\TheFlights\\LOT-Project\\Controllers\\FlightController.cs",
-              "RelativeToolTip": "LOT-Project\\Controllers\\FlightController.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAiwFMAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T08:02:05.526Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\TheFlights\\LOT-Project\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "LOT-Project\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\TheFlights\\LOT-Project\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "LOT-Project\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAQwB0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T07:47:30.244Z",
+              "WhenOpened": "2024-04-22T17:23:35.566Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Flight.cs",
-              "DocumentMoniker": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\LOT-Project\\LOT-Project\\Flight.cs",
-              "RelativeDocumentMoniker": "..\\LOT-Project\\LOT-Project\\Flight.cs",
-              "ToolTip": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\LOT-Project\\LOT-Project\\Flight.cs",
-              "RelativeToolTip": "..\\LOT-Project\\LOT-Project\\Flight.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAkAAAA",
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\TheFlights\\LOT-Project\\Services\\AccountService.cs",
+              "RelativeDocumentMoniker": "LOT-Project\\Services\\AccountService.cs",
+              "ToolTip": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\TheFlights\\LOT-Project\\Services\\AccountService.cs",
+              "RelativeToolTip": "LOT-Project\\Services\\AccountService.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAcwCQAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T12:23:42.558Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FlightsDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\LOT-Project\\LOT-Project\\FlightsDbContext.cs",
-              "RelativeDocumentMoniker": "..\\LOT-Project\\LOT-Project\\FlightsDbContext.cs",
-              "ToolTip": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\LOT-Project\\LOT-Project\\FlightsDbContext.cs",
-              "RelativeToolTip": "..\\LOT-Project\\LOT-Project\\FlightsDbContext.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAwAkAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T12:12:20.727Z",
+              "WhenOpened": "2024-04-22T18:40:35.055Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "20240416121018_FirstMigration.cs",
-              "DocumentMoniker": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\LOT-Project\\LOT-Project\\Migrations\\20240416121018_FirstMigration.cs",
-              "RelativeDocumentMoniker": "..\\LOT-Project\\LOT-Project\\Migrations\\20240416121018_FirstMigration.cs",
-              "ToolTip": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\LOT-Project\\LOT-Project\\Migrations\\20240416121018_FirstMigration.cs",
-              "RelativeToolTip": "..\\LOT-Project\\LOT-Project\\Migrations\\20240416121018_FirstMigration.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Title": "CreateExeption.cs",
+              "DocumentMoniker": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\TheFlights\\LOT-Project\\Exeptions\\CreateExeption.cs",
+              "RelativeDocumentMoniker": "LOT-Project\\Exeptions\\CreateExeption.cs",
+              "ToolTip": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\TheFlights\\LOT-Project\\Exeptions\\CreateExeption.cs",
+              "RelativeToolTip": "LOT-Project\\Exeptions\\CreateExeption.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T12:11:00.995Z"
+              "WhenOpened": "2024-04-22T17:40:09.017Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LOT-Project.csproj",
-              "DocumentMoniker": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\TheFlights\\LOT-Project\\LOT-Project.csproj",
-              "RelativeDocumentMoniker": "LOT-Project\\LOT-Project.csproj",
-              "ToolTip": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\TheFlights\\LOT-Project\\LOT-Project.csproj",
-              "RelativeToolTip": "LOT-Project\\LOT-Project.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-16T12:08:01.37Z"
+              "DocumentIndex": 1,
+              "Title": "FlightServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\TheFlights\\LOT-Project_Tests\\FlightServiceTests.cs",
+              "RelativeDocumentMoniker": "LOT-Project_Tests\\FlightServiceTests.cs",
+              "ToolTip": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\TheFlights\\LOT-Project_Tests\\FlightServiceTests.cs",
+              "RelativeToolTip": "LOT-Project_Tests\\FlightServiceTests.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAA8wB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T17:13:30.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DeleteExeption.cs",
+              "DocumentMoniker": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\TheFlights\\LOT-Project\\Exeptions\\DeleteExeption.cs",
+              "RelativeDocumentMoniker": "LOT-Project\\Exeptions\\DeleteExeption.cs",
+              "ToolTip": "C:\\Users\\mrych\\OneDrive\\Pulpit\\ProjektyGitHub\\TheFlights\\LOT-Project\\Exeptions\\DeleteExeption.cs",
+              "RelativeToolTip": "LOT-Project\\Exeptions\\DeleteExeption.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T17:39:51.23Z",
+              "EditorCaption": ""
             }
           ]
         }
